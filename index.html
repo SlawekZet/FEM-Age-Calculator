@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body>
+    <main>
+      <div class="input-section">
+        <div class="input-wrapper">
+          <p class="input-section-text" id="input-section-text-day">Day</p>
+          <input
+            type="number"
+            class="input-date"
+            id="input-day"
+            placeholder="DD"
+            min="1"
+            max="31"
+          />
+          <p class="error-message error-day"></p>
+        </div>
+        <div class="input-wrapper">
+          <p class="input-section-text" id="input-section-text-month">Month</p>
+          <input
+            type="number"
+            class="input-date"
+            id="input-month"
+            placeholder="MM"
+            min="1"
+            max="12"
+          />
+          <p class="error-message error-month"></p>
+        </div>
+        <div class="input-wrapper">
+          <p class="input-section-text" id="input-section-text-year">Year</p>
+          <input
+            type="number"
+            class="input-date"
+            id="input-year"
+            placeholder="YYYY"
+          />
+          <p class="error-message error-year"></p>
+        </div>
+      </div>
+      <div class="separator">
+        <hr />
+        <button class="arrow-button" onclick="calculateDate()">
+          <img src="assets/images/icon-arrow.svg" alt="" />
+        </button>
+      </div>
+      <div class="calculations">
+        <div class="calculations-section calc-years">
+          <p class="text-big purple" id="calc-years-text-output">--</p>
+          <p class="text-big">years</p>
+        </div>
+        <div class="calculations-section calc-months">
+          <p class="text-big purple" id="calc-months-text-output">--</p>
+          <p class="text-big">months</p>
+        </div>
+        <div class="calculations-section calc-days">
+          <p class="text-big purple" id="calc-days-text-output">--</p>
+          <p class="text-big">days</p>
+        </div>
+      </div>
+    </main>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

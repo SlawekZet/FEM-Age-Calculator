@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: hsl(0, 0%, 94%);
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  color: hsl(0, 0%, 8%);
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background-color: hsl(0, 0%, 100%);
+  padding: 3rem 2rem;
+  border-radius: 25px 25px 150px 25px;
+  margin: 1rem;
+  max-width: 700px;
+  box-shadow: 10px 10px 50px 1px rgba(0, 0, 0, 0.1);
+}
+
+.input-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.input-section .input-wrapper .input-section-text {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: hsl(0, 1%, 44%);
+  letter-spacing: 2px;
+  padding-bottom: 5px;
+}
+.input-section .input-wrapper .error-message {
+  font-size: 12px;
+  font-weight: 400;
+  font-style: italic;
+  padding-top: 5px;
+  color: hsl(0, 100%, 67%);
+}
+.input-section .input-wrapper input {
+  font-size: 28px;
+  max-width: 9rem;
+  height: 3.5rem;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 1rem;
+  border: 1px solid hsl(0, 0%, 86%);
+}
+.input-section .input-wrapper input:hover {
+  border: 1px solid hsl(259, 100%, 65%);
+  cursor: pointer;
+}
+.input-section .input-wrapper input:focus {
+  outline-color: hsl(259, 100%, 65%);
+  outline-width: 1px;
+}
+
+.separator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.separator hr {
+  width: 100%;
+  border: 1px solid hsl(0, 0%, 94%);
+}
+.separator .arrow-button {
+  background-color: hsl(259, 100%, 65%);
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  border: none;
+  flex-shrink: 0;
+}
+.separator .arrow-button:hover {
+  background-color: hsl(0, 0%, 8%);
+  cursor: pointer;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.calculations {
+  font-size: 75px;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1;
+}
+.calculations .calculations-section {
+  display: flex;
+}
+.calculations .calculations-section .purple {
+  color: hsl(259, 100%, 65%);
+}
+
+.input-error {
+  border: 1px solid hsl(0, 100%, 67%) !important;
+}
+
+.text-error {
+  color: hsl(0, 100%, 67%) !important;
+}
+
+@media screen and (max-width: 525px) {
+  main {
+    padding: 3rem 1.5rem;
+  }
+  .input-section {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .input-section .input-wrapper input {
+    font-size: 18px;
+    font-weight: 800;
+    width: 5.5rem;
+    padding: 15px;
+  }
+  .separator {
+    position: relative;
+    padding: 50px 0 50px 0;
+  }
+  .separator .arrow-button {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .separator .arrow-button img {
+    scale: 50%;
+  }
+  .calculations {
+    font-size: 55px;
+  }
+}

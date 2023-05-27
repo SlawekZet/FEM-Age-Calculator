@@ -1,0 +1,131 @@
+@import "config";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: $off-white;
+  font-family: $font;
+  font-size: 32px;
+  color: $off-black;
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background-color: $white;
+  padding: 3rem 2rem;
+  border-radius: 25px 25px 150px 25px;
+  margin: 1rem;
+  max-width: 700px;
+  box-shadow: 10px 10px 50px 1px rgba(0, 0, 0, 0.1);
+}
+
+.input-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+
+  .input-wrapper {
+    .input-section-text {
+      text-transform: uppercase;
+      font-size: 12px;
+      color: $smokey-grey;
+      letter-spacing: 2px;
+      padding-bottom: 5px;
+    }
+
+    .error-message {
+      font-size: 12px;
+      font-weight: 400;
+      font-style: italic;
+      padding-top: 5px;
+      color: $light-red;
+    }
+
+    input {
+      font-size: 28px;
+      max-width: 9rem;
+      height: 3.5rem;
+      font-weight: 700;
+      border-radius: 5px;
+      padding: 1rem;
+      border: 1px solid $light-grey;
+    }
+
+    input:hover {
+      border: 1px solid $purple;
+      cursor: pointer;
+    }
+
+    input:focus {
+      outline-color: $purple;
+      outline-width: 1px;
+    }
+  }
+}
+
+.separator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  hr {
+    width: 100%;
+    border: 1px solid $off-white;
+  }
+
+  .arrow-button {
+    background-color: $purple;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    border: none;
+    flex-shrink: 0;
+  }
+
+  .arrow-button:hover {
+    background-color: $off-black;
+    cursor: pointer;
+  }
+}
+
+// ukrywanie strzałek w polach number
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.calculations {
+  font-size: 75px;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1;
+
+  .calculations-section {
+    display: flex;
+
+    .purple {
+      color: $purple;
+      // letter-spacing: 10px;
+    }
+  }
+}
+
+.input-error {
+  border: 1px solid $light-red !important;
+}
+
+.text-error {
+  color: $light-red !important;
+}
+
+@import "mobile";
